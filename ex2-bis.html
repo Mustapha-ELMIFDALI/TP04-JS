@@ -1,0 +1,32 @@
+<script>
+    function hjms2(s) {
+
+    let jours = Math.floor(s / 86400);
+    s %= 86400;
+
+    let heures = Math.floor(s / 3600);
+    s %= 3600;
+
+    let minutes = Math.floor(s / 60);
+    s %= 60;
+
+    let resultat = "";
+
+    if (jours > 0)
+        resultat += jours + (jours == 1 ? " jour " : " jours ");
+
+    if (heures > 0)
+        resultat += heures + (heures == 1 ? " heure " : " heures ");
+
+    if (minutes > 0)
+        resultat += minutes + (minutes == 1 ? " minute " : " minutes ");
+
+    if (s > 0)
+        resultat += s + (s == 1 ? " seconde" : " secondes");
+
+    console.log("Cette durée équivaut à " + resultat);
+}
+
+console.log('Une durée en secondes :  3621')
+hjms2(3621);
+</script>

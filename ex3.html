@@ -1,0 +1,50 @@
+<script>
+  var a = parseFloat(prompt("1er nombre : "));
+  var b = parseFloat(prompt("2ème nombre : "));
+  var c = parseFloat(prompt("3ème nombre : "));
+
+  var premier, deuxieme, troisieme;
+  function troisNombres() {
+    if (a <= b && a <= c) {
+      premier = a;
+      if (b <= c) {
+        deuxieme = b;
+        troisieme = c;
+      } else {
+        deuxieme = c;
+        troisieme = b;
+      }
+    } else if (b <= a && b <= c) {
+      premier = b;
+      if (a <= c) {
+        deuxieme = a;
+        troisieme = c;
+      } else {
+        deuxieme = c;
+        troisieme = a;
+      }
+    } else {
+      premier = c;
+      if (a <= b) {
+        deuxieme = a;
+        troisieme = b;
+      } else {
+        deuxieme = b;
+        troisieme = a;
+      }
+    }
+
+    console.log(
+      "les nombres dans l'ordre croissant :" +
+        premier +
+        " " +
+        deuxieme +
+        " " +
+        troisieme,
+    );
+  }
+  console.log("1er nombre  :" + a);
+  console.log("2ème nombre :" + b);
+  console.log("3ème nombre :" + c);
+  troisNombres();
+</script>

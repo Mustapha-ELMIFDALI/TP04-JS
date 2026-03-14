@@ -1,0 +1,18 @@
+<script>
+    function triangle2(taille) {
+    for (let i = 1; i <= taille; i++) {
+        let ligne = "";
+
+        for (let j = 1; j <= i; j++) {
+            ligne += "*";
+        }
+
+        console.log(ligne);
+    }
+}
+
+let taille = 7;
+console.log("en utilisant for :")
+console.log("Un motif de taille =", taille);
+triangle2(taille);
+</script>

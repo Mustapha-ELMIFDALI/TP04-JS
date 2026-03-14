@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function triangle1(taille) {
+    let i = 1;
+
+    while (i <= taille) {
+        let j = 1;
+        let ligne = "";
+
+        while (j <= i) {
+            ligne += "*";
+            j++;
+        }
+
+        console.log(ligne);
+        i++;
+    }
+}
+
+let taille = 7;
+console.log("en utilisant while :")
+console.log("Un motif de taille =", taille);
+triangle1(taille);
+    </script>
+</body>
+</html>
